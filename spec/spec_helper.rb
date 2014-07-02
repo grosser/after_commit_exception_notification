@@ -1,0 +1,2 @@
+require "after_commit_exception_notification/version"
+require "after_commit_exception_notification"
