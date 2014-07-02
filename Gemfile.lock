@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    after_commit_exception_notification (0.0.0)
+    after_commit_exception_notification (0.1.0)
       activerecord
 
 GEM
