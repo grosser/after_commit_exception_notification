@@ -1,4 +1,5 @@
 require "spec_helper"
+require "logger"
 
 describe AfterCommitExceptionNotification do
   let(:calls) { [] }
@@ -14,7 +15,7 @@ describe AfterCommitExceptionNotification do
   end
 
   it "notifies on after_commit exception" do
-    ActiveRecord::Base.logger.should_receive(:error).with { |e| e.to_s.should include "BOOOM"; true } # rails still receives the exception
+    ActiveRecord::Base.logger.should_receive(:error).with(satisfy{ |e| e.to_s.should include "BOOOM"; true }) # rails still receives the exception
     user = User.create!(:boom => true)
     user.persisted?.should == true
     calls.size.should == 1

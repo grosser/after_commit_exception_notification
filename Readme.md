@@ -11,7 +11,9 @@ Usage
 =====
 
 ```Ruby
-CODE EXAMPLE
+AfterCommitExceptionNotification.callback do |exception|
+  ErrorService.report("after_commit crashed", exception)
+end
 ```
 
 Author

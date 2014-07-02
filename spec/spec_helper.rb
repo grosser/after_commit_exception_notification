@@ -23,3 +23,12 @@ class User < ActiveRecord::Base
     raise "BOOOM" if boom
   end
 end
+
+RSpec.configure do |config|
+  config.expect_with :rspec do |c|
+    c.syntax = :should
+  end
+  config.mock_with :rspec do |c|
+    c.syntax = :should
+  end
+end
