@@ -19,4 +19,4 @@ module AfterCommitExceptionNotification
   end
 end
 
-ActiveRecord::Base.include AfterCommitExceptionNotification::CommittedWithNotification
+ActiveRecord::Base.send :include, AfterCommitExceptionNotification::CommittedWithNotification
