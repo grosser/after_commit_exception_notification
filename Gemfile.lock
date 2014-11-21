@@ -1,20 +1,20 @@
 PATH
   remote: .
   specs:
-    after_commit_exception_notification (0.1.1)
+    after_commit_exception_notification (0.2.0)
       activerecord
 
 GEM
   remote: https://rubygems.org/
   specs:
-    activemodel (4.1.4)
-      activesupport (= 4.1.4)
+    activemodel (4.1.8)
+      activesupport (= 4.1.8)
       builder (~> 3.1)
-    activerecord (4.1.4)
-      activemodel (= 4.1.4)
-      activesupport (= 4.1.4)
+    activerecord (4.1.8)
+      activemodel (= 4.1.8)
+      activesupport (= 4.1.8)
       arel (~> 5.0.0)
-    activesupport (4.1.4)
+    activesupport (4.1.8)
       i18n (~> 0.6, >= 0.6.9)
       json (~> 1.7, >= 1.7.7)
       minitest (~> 5.1)
@@ -24,9 +24,9 @@ GEM
     builder (3.2.2)
     bump (0.5.0)
     diff-lcs (1.2.5)
-    i18n (0.6.9)
+    i18n (0.6.11)
     json (1.8.1)
-    minitest (5.3.5)
+    minitest (5.4.3)
     mysql2 (0.3.16)
     rake (10.3.2)
     rspec (3.0.0)
@@ -42,7 +42,7 @@ GEM
       rspec-support (~> 3.0.0)
     rspec-support (3.0.2)
     thread_safe (0.3.4)
-    tzinfo (1.2.1)
+    tzinfo (1.2.2)
       thread_safe (~> 0.1)
     wwtd (0.5.3)
 
