@@ -37,7 +37,7 @@ describe AfterCommitExceptionNotification do
   end
 
   it "prints to stderr by default" do
-    AfterCommitExceptionNotification.remove_instance_variable(:@block)
+    AfterCommitExceptionNotification.send(:remove_instance_variable, :@block)
     recorded = capture_stderr do
       user = User.create!(:boom => true)
       user.persisted?.should == true
