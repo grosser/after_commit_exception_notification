@@ -4,8 +4,12 @@ module AfterCommitExceptionNotification
   def self.callback(exception = nil, &block)
     if block
       @block = block
-    else
+    elsif @block
       @block.call(exception)
+    else
+      message = ["After commit failed: #{$!}"].concat $!.backtrace
+      ActiveRecord::Base.logger.error(message)
+      warn message
     end
   end
 

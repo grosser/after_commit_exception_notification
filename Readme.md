@@ -11,6 +11,8 @@ Usage
 =====
 
 ```Ruby
+require 'after_commit_exception_notification' # by default prints to STDERR and ActiveRecord::Base.logger
+
 AfterCommitExceptionNotification.callback do |exception|
   ErrorService.report("after_commit crashed", exception)
 end

@@ -4,6 +4,14 @@ require "logger"
 describe AfterCommitExceptionNotification do
   let(:calls) { [] }
 
+  def capture_stderr
+    old, $stderr = $stderr, StringIO.new
+    yield
+    $stderr.string
+  ensure
+    $stderr = old
+  end
+
   before do
     User.delete_all
     ActiveRecord::Base.logger = Logger.new(StringIO.new)
@@ -26,5 +34,15 @@ describe AfterCommitExceptionNotification do
     user = User.create!
     user.persisted?.should == true
     calls.size.should == 0
+  end
+
+  it "prints to stderr by default" do
+    AfterCommitExceptionNotification.remove_instance_variable(:@block)
+    recorded = capture_stderr do
+      user = User.create!(:boom => true)
+      user.persisted?.should == true
+    end
+    recorded.should include "After commit failed: BOOOM"
+    recorded.should include "lib/after_commit_exception_notific"
   end
 end
