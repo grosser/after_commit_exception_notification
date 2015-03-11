@@ -1,5 +1,11 @@
 Rails: Get notified when an after_commit block blows up
 
+This gem is deprecated since rails 4.2 / 5 now have the correct behavior.
+
+```
+config.active_record.raise_in_transactional_callbacks = true
+```
+
 Install
 =======
 
