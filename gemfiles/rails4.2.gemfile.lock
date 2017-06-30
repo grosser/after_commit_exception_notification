@@ -1,5 +1,5 @@
 PATH
-  remote: .
+  remote: ..
   specs:
     after_commit_exception_notification (0.2.0)
       activerecord (>= 3.2, < 5.0)
@@ -49,6 +49,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activerecord (~> 4.2.9)
   after_commit_exception_notification!
   bump
   mysql2
