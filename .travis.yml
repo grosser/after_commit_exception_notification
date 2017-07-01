@@ -1,10 +1,9 @@
 bundler_args: ""
 before_script: mysql -uroot -e 'create database after_commit_exception_notification'
 rvm:
-  - 1.9.3
-  - 2.0.0
-  - 2.1.1
+  - 2.2.7
+  - 2.3.4
+  - 2.4.1
 gemfile:
- - gemfiles/ar32.gemfile
- - gemfiles/ar40.gemfile
- - gemfiles/ar41.gemfile
+ - gemfiles/rails3.2.gemfile
+ - gemfiles/rails4.2.gemfile
