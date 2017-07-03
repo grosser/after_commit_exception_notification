@@ -14,7 +14,7 @@ module AfterCommitExceptionNotification
   end
 
   module CommittedWithNotification
-    def committed!(*args)
+    def committed!
       super
     rescue Exception => e # same as active_record/connection_adapters/abstract/database_statements.rb:370
       AfterCommitExceptionNotification.callback(e)

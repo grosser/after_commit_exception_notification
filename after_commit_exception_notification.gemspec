@@ -9,7 +9,7 @@ Gem::Specification.new name, AfterCommitExceptionNotification::VERSION do |s|
   s.files = `git ls-files lib/ bin/ MIT-LICENSE`.split("\n")
   s.license = "MIT"
 
-  s.add_runtime_dependency "activerecord", ">= 3.2", "< 5.0"
+  s.add_runtime_dependency "activerecord"
 
   s.add_development_dependency "rspec", "~> 3"
   s.add_development_dependency "wwtd"

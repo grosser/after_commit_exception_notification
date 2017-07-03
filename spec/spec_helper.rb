@@ -4,14 +4,14 @@ require "after_commit_exception_notification"
 # connect
 ActiveRecord::Schema.verbose = false
 ActiveRecord::Base.establish_connection(
-  adapter: "mysql2",
-  database: "after_commit_exception_notification",
-  host: "127.0.0.1"
+  :adapter => "mysql2",
+  :database => "after_commit_exception_notification",
+  :host => "127.0.0.1"
 )
 
 # create tables
-ActiveRecord::Schema.define(version: 1) do
-  create_table :users, force: true
+ActiveRecord::Schema.define(:version => 1) do
+  create_table :users, :force => true
 end
 
 # create models
