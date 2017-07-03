@@ -1,32 +1,29 @@
 PATH
   remote: .
   specs:
-    after_commit_exception_notification (0.3.0)
-      activerecord (>= 3.2, < 5.0)
+    after_commit_exception_notification (0.2.0)
+      activerecord
 
 GEM
   remote: https://rubygems.org/
   specs:
-    activemodel (4.1.8)
-      activesupport (= 4.1.8)
-      builder (~> 3.1)
-    activerecord (4.1.8)
-      activemodel (= 4.1.8)
-      activesupport (= 4.1.8)
-      arel (~> 5.0.0)
-    activesupport (4.1.8)
-      i18n (~> 0.6, >= 0.6.9)
-      json (~> 1.7, >= 1.7.7)
+    activemodel (5.1.2)
+      activesupport (= 5.1.2)
+    activerecord (5.1.2)
+      activemodel (= 5.1.2)
+      activesupport (= 5.1.2)
+      arel (~> 8.0)
+    activesupport (5.1.2)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (~> 0.7)
       minitest (~> 5.1)
-      thread_safe (~> 0.1)
       tzinfo (~> 1.1)
-    arel (5.0.1.20140414130214)
-    builder (3.2.2)
+    arel (8.0.0)
     bump (0.5.0)
+    concurrent-ruby (1.0.5)
     diff-lcs (1.2.5)
-    i18n (0.6.11)
-    json (1.8.1)
-    minitest (5.4.3)
+    i18n (0.8.4)
+    minitest (5.10.2)
     mysql2 (0.3.16)
     rake (10.3.2)
     rspec (3.0.0)
@@ -41,8 +38,8 @@ GEM
     rspec-mocks (3.0.2)
       rspec-support (~> 3.0.0)
     rspec-support (3.0.2)
-    thread_safe (0.3.4)
-    tzinfo (1.2.2)
+    thread_safe (0.3.6)
+    tzinfo (1.2.3)
       thread_safe (~> 0.1)
     wwtd (0.5.3)
 
@@ -56,3 +53,6 @@ DEPENDENCIES
   rake
   rspec (~> 3)
   wwtd
+
+BUNDLED WITH
+   1.15.0
